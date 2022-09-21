@@ -11,12 +11,7 @@ class App extends React.Component{
     this.state = {count:0}
     this.handleClick = this.handleClick.bind(this)
   }
-
- componentDidUpdate(){
-    if(this.state.count % 2 === 0){
-      console.log(`Rendering with count:-${this.state.count}`)
-    }
-  }
+  
   shouldComponentUpdate(){
     if(this.state.count % 2 === 0){
       return false
@@ -25,7 +20,7 @@ class App extends React.Component{
   }
 
   render(){
-    
+    console.log(`Rendering with count:-${this.state.count}`)
     return(
       <div>
         <span id="count">{this.state.count}</span>
