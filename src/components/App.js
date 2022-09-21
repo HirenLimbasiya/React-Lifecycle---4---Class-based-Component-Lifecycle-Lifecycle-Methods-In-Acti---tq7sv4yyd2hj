@@ -13,7 +13,7 @@ class App extends React.Component{
   }
 
   componentDidUpdate(){
-    if(this.state.count == 0 ||this.state.count % 2 == 0){
+    if(this.state.count % 2 === 0){
       console.log(`Rendering with count:-${this.state.count}`)
     }
   }
